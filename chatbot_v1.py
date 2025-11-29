@@ -2,16 +2,23 @@
 Singapore Nutrition Chatbot - First Draft
 Quick hackathon build - will improve later
 """
-
+pip install flask flask-cors requests --break-system-packages
 from flask import Flask, request, jsonify
 from flask_cors import CORS
 import requests
 import json
-pip install flask flask-cors requests --break-system-packages
+
 
 app = Flask(__name__)
 CORS(app)
+@app.route('/api/data')
+def get_data():
+    # using requests to obtain external data
+    response = requests.get('https://api.example.com/data')
+    return jsonify(response.json())
 
+if __name__ == '__main__':
+    app.run(debug=True)
 # USDA API setup - free API, just need to register
 USDA_KEY = "DEMO_KEY"  # replace this with your actual key later
 USDA_URL = "https://api.nal.usda.gov/fdc/v1/foods/search"
