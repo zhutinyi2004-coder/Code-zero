@@ -12,7 +12,7 @@ import json
 from datetime import datetime
 
 # USDA API setup - free API, just need to register
-USDA_KEY = "DEMO_KEY"  # replace this with your actual key later
+USDA_KEY = "2dPV0Hytk8xBTGn88XumjCxgp7tN8yrUC6KiQxAX"  # replace this with your actual key later
 USDA_URL = "https://api.nal.usda.gov/fdc/v1/foods/search"
 
 
