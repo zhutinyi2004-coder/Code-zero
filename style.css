@@ -93,3 +93,119 @@ button {
 button:hover {
     background-color: #38a169;
 }
+
+/* Material-UI style button */
+.mui-button {
+    background-color: #1976d2;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    padding: 10px 16px;
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    cursor: pointer;
+    transition: background-color 0.3s, box-shadow 0.3s, transform 0.2s;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.mui-button:hover {
+    background-color: #1565c0;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+    transform: translateY(-1px);
+}
+
+.mui-button:active {
+    transform: translateY(0);
+    box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+}
+
+/* Material-UI chatbox */
+.mui-input {
+    border: none;
+    border-bottom: 2px solid #1976d2;
+    padding: 12px 8px;
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    background: transparent;
+    transition: border-color 0.3s, box-shadow 0.3s;
+    width: 100%;
+}
+
+.mui-input:focus {
+    outline: none;
+    border-bottom-color: #ff4081;
+    box-shadow: 0 2px 0 0 #ff4081;
+}
+
+.mui-input::placeholder {
+    color: #666;
+    opacity: 0.7;
+}
+
+/* Material-UI style card */
+.mui-card {
+    background: white;
+    border-radius: 8px;
+    padding: 16px;
+    margin: 8px 0;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    transition: box-shadow 0.3s, transform 0.3s;
+    border-left: 4px solid #1976d2;
+}
+
+.mui-card:hover {
+    box-shadow: 0 4px 16px rgba(0,0,0,0.2);
+    transform: translateY(-2px);
+}
+
+/* message material style */
+.mui-message {
+    background: white;
+    border-radius: 12px;
+    padding: 12px 16px;
+    margin: 8px 0;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.12);
+    transition: all 0.3s ease;
+    border-left: 4px solid transparent;
+    border-left: 4px solid transparent;
+    font-family: Arial, sans-serif; /* same font */
+}
+
+.mui-message.user {
+    background: #1976d2;
+    color: white;
+    margin-left: auto;
+    border-left-color: #1565c0;
+}
+
+.mui-message.bot {
+    background: #f5f5f5;
+    margin-right: auto;
+    border-left-color: #4caf50;
+}
+
+.mui-message:hover {
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+
+/*nuitrition card */
+.nutrition-card {
+    background: linear-gradient(135deg, #e8f5e8, #f1f8e9);
+    border-left: 4px solid #4caf50;
+    border-radius: 8px;
+    padding: 16px;
+    margin: 12px 0;
+    box-shadow: 0 2px 8px rgba(76, 175, 80, 0.2);
+     font-family: Arial, sans-serif; /* same font */
+}
+
+.nutrition-card .material-icons {
+    color: #4caf50;
+    margin-right: 8px;
+}
