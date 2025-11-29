@@ -8,21 +8,73 @@ from flask_cors import CORS
 import requests
 import json
 
-
-app = Flask(__name__)
-CORS(app)
-@app.route('/api/data')
-def get_data():
-    # using requests to obtain external data
-    response = requests.get('https://api.example.com/data')
-    return jsonify(response.json())
-
-if __name__ == '__main__':
-    app.run(debug=True)
 # USDA API setup - free API, just need to register
 USDA_KEY = "DEMO_KEY"  # replace this with your actual key later
 USDA_URL = "https://api.nal.usda.gov/fdc/v1/foods/search"
 
+
+app = Flask(__name__)
+CORS(app)
+
+@app.route('/api/data')
+def get_data():
+    try:
+        # Using a real available test API
+        response = requests.get('https://jsonplaceholder.typicode.com/posts/1')
+        response.raise_for_status()  # Check if HTTP request was successful
+        
+        return jsonify({
+            "status": "success",
+            "data": response.json()
+        })
+    except Exception as e:
+        return jsonify({"error": str(e)}), 500
+
+@app.route('/')
+def home():
+    return "Flask server is running! Visit /api/data to view test data"
+
+@app.route('/health')
+def health_check():
+    return jsonify({"service_status": "running", "message": "Server is working properly"})
+
+@app.route('/api/users')
+def get_users():
+    try:
+        # Another example endpoint
+        response = requests.get('https://jsonplaceholder.typicode.com/users')
+        response.raise_for_status()
+        
+        return jsonify({
+            "status": "success",
+            "count": len(response.json()),
+            "users": response.json()
+        })
+    except Exception as e:
+        return jsonify({"error": str(e)}), 500
+# Add USDA API endpoint
+@app.route('/api/food/<string:food_name>')
+def search_food(food_name):
+    try:
+        params = {
+            'api_key': USDA_KEY,
+            'query': food_name,
+            'pageSize': 5
+        }
+        
+        response = requests.get(USDA_URL, params=params)
+        response.raise_for_status()
+        
+        return jsonify({
+            "status": "success",
+            "search_term": food_name,
+            "data": response.json()
+        })
+    except Exception as e:
+        return jsonify({"error": str(e)}), 500
+
+if __name__ == '__main__':
+    app.run(debug=True, host='0.0.0.0', port=5000)
 # gonna store user data in a text file for now
 # yeah i know this isnt the best way but its quick for hackathon
 def save_to_file(data, filename):
