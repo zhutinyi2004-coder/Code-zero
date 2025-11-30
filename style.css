@@ -37,6 +37,23 @@ h1 {
     display: flex;
     flex-direction: column;
 }
+/* scroll bar details */
+#chat-box::-webkit-scrollbar {
+    width: 6px;
+    transition: width 0.4s ease; 
+}
+#chat-box::-webkit-scrollbar-track {
+    background: transparent;
+    border-radius: 10px;
+}
+#chat-box::-webkit-scrollbar-thumb {
+    background: rgba(136, 136, 136, 0.4);
+    border-radius: 10px;
+    transition: background-color 0.2s ease;
+}
+#chat-box::-webkit-scrollbar-thumb:hover {
+    background: #38a169; 
+}
 
 .message {
     padding: 10px 15px;
