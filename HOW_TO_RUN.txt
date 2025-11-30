@@ -1,0 +1,240 @@
+╔════════════════════════════════════════════════════════════╗
+║                                                            ║
+║          HOW TO RUN SINGAPORE NUTRITION CHATBOT            ║
+║                                                            ║
+╚════════════════════════════════════════════════════════════╝
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+OPTION 1: WEB VERSION (RECOMMENDED)
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+STEP 1: install dependencies
+────────────────────────────────────────────────────────────
+
+open terminal/command prompt in the project folder and type:
+
+    pip install flask flask-cors requests
+
+OR use the requirements file:
+
+    pip install -r requirements.txt
+
+
+STEP 2: run the flask server
+────────────────────────────────────────────────────────────
+
+in the same terminal, type:
+
+    python app.py
+
+you should see:
+    ============================================================
+    🥗 SINGAPORE NUTRITION CHATBOT - WEB VERSION
+    ============================================================
+    📡 api key configured: no (using demo_key)
+    📁 data directory: C:\path\to\data
+    💾 chat history: C:\path\to\chat_history.txt
+    
+    starting flask server...
+    open browser: http://127.0.0.1:5000
+    ============================================================
+    
+    * Running on http://127.0.0.1:5000
+
+
+STEP 3: open your browser
+────────────────────────────────────────────────────────────
+
+open any browser (chrome, firefox, edge, safari) and go to:
+
+    http://127.0.0.1:5000
+
+OR
+
+    http://localhost:5000
+
+
+STEP 4: start chatting!
+────────────────────────────────────────────────────────────
+
+type in the chat box and press enter or click send button.
+
+try these:
+    - nutrition for chicken rice
+    - are carbs bad?
+    - diabetes tips
+    - healthy swaps
+
+
+STEP 5: to stop the server
+────────────────────────────────────────────────────────────
+
+in the terminal, press:
+
+    CTRL + C  (windows/linux)
+    CMD + C   (mac)
+
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+OPTION 2: COMMAND-LINE VERSION (NO WEB INTERFACE)
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+STEP 1: install dependencies
+────────────────────────────────────────────────────────────
+
+    pip install requests
+
+
+STEP 2: run the chatbot
+────────────────────────────────────────────────────────────
+
+    python chatbot_improved.py
+
+you should see:
+    ============================================================
+    🥗 SINGAPORE NUTRITION CHATBOT
+    Based on HPB Guidelines
+    ============================================================
+    
+    📡 Using API: https://api.nal.usda.gov/...
+    📁 Data files: /path/to/data/
+    💾 Chat history: /path/to/chat_history.txt
+    
+    Type 'quit' to exit
+    
+    You: 
+
+
+STEP 3: start chatting!
+────────────────────────────────────────────────────────────
+
+type your questions and press enter.
+
+examples:
+    You: nutrition for chicken rice
+    You: are carbs bad?
+    You: diabetes tips
+    You: quit  (to exit)
+
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+QUICK TROUBLESHOOTING
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+PROBLEM: "python is not recognized"
+────────────────────────────────────────────────────────────
+FIX: install python from python.org
+     OR try: python3 app.py
+
+
+PROBLEM: "no module named 'flask'"
+────────────────────────────────────────────────────────────
+FIX: pip install flask flask-cors requests
+
+
+PROBLEM: "address already in use"
+────────────────────────────────────────────────────────────
+FIX: another program using port 5000
+     kill it OR change port in app.py line 387:
+     app.run(debug=True, host='127.0.0.1', port=5001)
+     then use http://127.0.0.1:5001
+
+
+PROBLEM: browser shows "can't reach this page"
+────────────────────────────────────────────────────────────
+FIX: make sure flask is running in terminal
+     check terminal for errors
+     try http://127.0.0.1:5000 instead of localhost:5000
+
+
+PROBLEM: chatbot shows error in browser
+────────────────────────────────────────────────────────────
+FIX: open browser console (press F12)
+     check for errors
+     make sure flask server is running
+
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+WHAT EACH FILE DOES
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+app.py                  → run this for web version
+chatbot_improved.py     → run this for command-line version
+index.html              → web interface (auto-loaded by app.py)
+config.json             → settings (api key, file paths, guidelines)
+requirements.txt        → list of dependencies to install
+
+data/sg_foods.txt       → singapore food nutrition data
+data/myths.txt          → diet myths database
+data/healthy_swaps.txt  → healthy food alternatives
+data/chat_history.txt   → auto-saved conversation history
+
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+COMPLETE WORKFLOW
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+1. open terminal in project folder
+   (right-click folder → "open in terminal" or "open command window here")
+
+2. install dependencies once:
+   pip install -r requirements.txt
+
+3. run the server:
+   python app.py
+
+4. open browser:
+   http://127.0.0.1:5000
+
+5. chat with the bot!
+
+6. check chat history:
+   open data/chat_history.txt
+
+7. edit data:
+   edit files in data/ folder with any text editor
+
+8. restart server if you edit data:
+   press CTRL+C in terminal
+   then: python app.py
+
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+WINDOWS USERS
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+if "python" doesn't work, try:
+    py app.py
+    OR
+    python3 app.py
+
+if "pip" doesn't work, try:
+    py -m pip install -r requirements.txt
+    OR
+    python3 -m pip install -r requirements.txt
+
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+MAC/LINUX USERS
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+use python3 instead of python:
+    python3 app.py
+    pip3 install -r requirements.txt
+
+if permission denied:
+    sudo python3 app.py
+    OR
+    python3 app.py (without sudo, should work)
+
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+THAT'S IT!
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+THREE SIMPLE COMMANDS:
+    1. pip install -r requirements.txt
+    2. python app.py
+    3. open http://127.0.0.1:5000
+
+GOOD LUCK! 🚀

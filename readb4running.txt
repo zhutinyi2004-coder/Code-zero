@@ -1,0 +1,230 @@
+╔════════════════════════════════════════════════════════════╗
+║                                                            ║
+║   🥗 SINGAPORE NUTRITION CHATBOT - QUICK START GUIDE      ║
+║                                                            ║
+╚════════════════════════════════════════════════════════════╝
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+📋 STEP 1: INSTALL DEPENDENCIES
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+open terminal and run:
+
+    pip install -r requirements.txt
+
+this installs flask, flask-cors, and requests.
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+🔑 STEP 2: GET API KEY (OPTIONAL)
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+for better results:
+
+1. go to: https://api.data.gov/signup/
+2. enter your email
+3. copy api key from email
+4. open config.json
+5. replace "DEMO_KEY" with your key
+
+note: DEMO_KEY works but limited to 30 requests/hour
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+🚀 STEP 3: START THE WEB SERVER
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+in terminal:
+
+    python app.py
+
+you'll see:
+    ============================================================
+    🥗 SINGAPORE NUTRITION CHATBOT - WEB VERSION
+    ============================================================
+    📡 api key configured: yes/no
+    📁 data directory: /path/to/data
+    💾 chat history: /path/to/chat_history.txt
+    
+    starting flask server...
+    open browser: http://127.0.0.1:5000
+    ============================================================
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+🌐 STEP 4: OPEN WEB INTERFACE
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+open your browser and go to:
+
+    http://127.0.0.1:5000
+
+you'll see the singapore nutrition bot interface!
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+💬 STEP 5: TRY THESE EXAMPLES
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+type in the chat:
+
+🍗 nutrition for chicken rice
+💉 diabetes tips
+❤️  blood pressure advice
+🚫 are carbs bad?
+🔄 healthy swaps
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+📁 FILE STRUCTURE
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+sg-nutrition-chatbot/
+├── app.py                  ← flask backend (run this!)
+├── index.html              ← web interface
+├── chatbot_improved.py     ← cli version (optional)
+├── config.json             ← settings (edit api key here)
+├── requirements.txt        ← dependencies
+├── README.md               ← full documentation
+├── START_HERE.txt          ← this guide
+└── data/
+    ├── sg_foods.txt       ← singapore foods (edit here!)
+    ├── myths.txt          ← diet myths (edit here!)
+    ├── healthy_swaps.txt  ← food swaps (edit here!)
+    └── chat_history.txt   ← auto-saved chats
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+✏️  EDITING DATA FILES
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+all data in `data/` folder. just open with any text editor!
+
+each line = one json object
+lines starting with # = comments (ignored)
+
+EXAMPLE - ADD FOOD (data/sg_foods.txt):
+
+{"name": "hokkien mee", "calories": 680, "protein": 22, "carbs": 70, "fat": 35, "sodium": 1400, "fiber": 3, "sugar": 4}
+
+EXAMPLE - ADD MYTH (data/myths.txt):
+
+{"keywords": ["keto"], "myth": "keto is for everyone", "truth": "works for some, not all", "tip": "consult doctor first"}
+
+EXAMPLE - ADD SWAP (data/healthy_swaps.txt):
+
+{"category": "general", "unhealthy": "fried rice", "healthy": "brown rice stir-fry", "benefit": "more fiber, less oil"}
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+💾 CHAT HISTORY
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+all conversations saved in data/chat_history.txt
+
+format is human-readable:
+
+    ============================================================
+    [2024-11-30 15:00:00]
+    User: nutrition for chicken rice
+    Bot: 🍽️ CHICKEN RICE
+    ──────────────────────────────
+    Calories: 607 kcal
+    Protein: 25g
+    ...
+
+open anytime to review past conversations!
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+🐛 TROUBLESHOOTING
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+"modulenotfounderror: no module named 'flask'"
+→ run: pip install -r requirements.txt
+
+"address already in use"
+→ another app using port 5000
+→ change port in app.py: app.run(port=5001)
+
+"warning: line x has invalid json"
+→ check that line for typos
+→ each line must be valid json (no trailing commas)
+
+frontend shows error message
+→ make sure flask is running (python app.py)
+→ check browser console (f12) for errors
+→ verify backend at http://127.0.0.1:5000
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+🎮 COMMAND-LINE MODE (OPTIONAL)
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+if you prefer command-line:
+
+    python chatbot_improved.py
+
+works without web interface!
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+✨ KEY FEATURES
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+✅ 10 singapore foods pre-loaded
+✅ 6 diet myths to bust
+✅ 12 healthy food swaps
+✅ hpb-based health guidelines
+✅ usda api for international foods
+✅ material-ui styled web interface
+✅ readable chat history in text format
+✅ all data in editable text files
+✅ proper comment handling (#-prefixed lines)
+✅ utf-8 encoding (special characters supported)
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+🎯 FOR HACKATHON DEMO
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+1. start server: python app.py
+2. open browser: http://127.0.0.1:5000
+3. demo nutrition lookup: "chicken rice"
+4. demo myth busting: "are carbs bad?"
+5. show health tips: "diabetes"
+6. show food swaps
+7. open data files - show easy to edit
+8. open chat_history.txt - show readable format
+
+TALKING POINTS:
+• built specifically for singaporeans
+• all advice from official hpb guidelines
+• super easy to modify - just text files!
+• both web and cli interfaces
+• readable chat history
+• production-ready error handling
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+📚 MORE INFO
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+read README.md for:
+• detailed usage examples
+• configuration options
+• complete troubleshooting guide
+• data format specifications
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+🎉 YOU'RE READY!
+
+just run:  python app.py
+
+then open:  http://127.0.0.1:5000
+
+good luck with your hackathon! 🚀
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━

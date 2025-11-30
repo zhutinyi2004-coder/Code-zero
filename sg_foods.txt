@@ -1,0 +1,10 @@
+{"name": "chicken rice", "calories": 607, "protein": 25, "carbs": 78, "fat": 20, "sodium": 900, "fiber": 2, "sugar": 3}
+{"name": "nasi lemak", "calories": 644, "protein": 18, "carbs": 70, "fat": 32, "sodium": 1100, "fiber": 3, "sugar": 5}
+{"name": "laksa", "calories": 569, "protein": 22, "carbs": 56, "fat": 28, "sodium": 1800, "fiber": 3, "sugar": 6}
+{"name": "char kway teow", "calories": 742, "protein": 20, "carbs": 82, "fat": 38, "sodium": 1500, "fiber": 2, "sugar": 4}
+{"name": "yong tau foo", "calories": 380, "protein": 22, "carbs": 42, "fat": 12, "sodium": 950, "fiber": 6, "sugar": 3}
+{"name": "economic rice", "calories": 550, "protein": 28, "carbs": 65, "fat": 18, "sodium": 850, "fiber": 5, "sugar": 4}
+{"name": "fish soup", "calories": 320, "protein": 28, "carbs": 38, "fat": 6, "sodium": 850, "fiber": 2, "sugar": 2}
+{"name": "roti prata", "calories": 350, "protein": 8, "carbs": 45, "fat": 15, "sodium": 450, "fiber": 1, "sugar": 2}
+{"name": "mee goreng", "calories": 663, "protein": 18, "carbs": 75, "fat": 32, "sodium": 1200, "fiber": 3, "sugar": 8}
+{"name": "bak chor mee", "calories": 520, "protein": 24, "carbs": 62, "fat": 18, "sodium": 1300, "fiber": 3, "sugar": 5}
