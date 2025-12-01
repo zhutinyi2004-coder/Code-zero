@@ -160,7 +160,7 @@ h1 {
     transform: translateY(-1px);
 
 #user-input::placeholder {
-    color: #a0aec0
+    color: #a0aec0;
 }
 /* button with styling*/
 button {
@@ -185,7 +185,7 @@ button {
 }
 
 button:hover {
-    background-color: linear-gradient(135deg, #38a169 0%, #2d6a4f 100%)；
+    background: linear-gradient(135deg, #38a169 0%, #2d6a4f 100%);
     transform: translateY(-2px);
     box-shadow:
         0 6px 12px rgba(56,161,105,0.3),
@@ -345,18 +345,6 @@ button:disabled {
     transform: translateY(-2px);
 }
 
-/* message material style */
-.mui-message {
-    background: white;
-    border-radius: 12px;
-    padding: 12px 16px;
-    margin: 8px 0;
-    box-shadow: 0 1px 3px rgba(0,0,0,0.12);
-    transition: all 0.3s ease;
-    border-left: 4px solid transparent;
-    border-left: 4px solid transparent;
-    font-family: Arial, sans-serif; /* same font */
-}
 
 .mui-message.user {
     background:  linear-gradient(135deg, #1976d2 0%, #1565c0 100%);
