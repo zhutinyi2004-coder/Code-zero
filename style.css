@@ -108,7 +108,51 @@ button {
 button:hover {
     background-color: #38a169;
 }
+/* quick questions buttons */
+.quick-questions {
+    margin: 15px 0;
+}
 
+.quick-questions button{
+    background-colour: #e8f5e9;
+    color: #2d6a4f;
+    border: 1px solid #c8e6c9;
+    padding: 8px 12px;
+    border-radius: 15px;
+    font-size: 0.85em;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    white-space: nowrap;
+}
+
+.quick-questions button: hover{
+    background-colour:#c8e6c9;
+    transform: translateY(-1px);
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+/* Scrollbar enhancement */
+#chat-box::-webkit-scrollbar {
+    width: 6px;
+}
+
+#chat-box:hover::-webkit-scrollbar {
+    width: 8px;
+}
+
+#chat-box::-webkit-scrollbar-thumb:hover {
+    background: #2d6a4f;
+}
+
+/* Message animations */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.mui-message {
+    animation: fadeIn 0.3s ease;
+}
 /* Material-UI style button */
 .mui-button {
     background-color: #1976d2;
