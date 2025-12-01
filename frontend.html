@@ -23,21 +23,16 @@
                 Hello! I can help with nutrition info for Singaporean foods.
             </div>     
             
-            <div class="mui-message bot">
-                <div style="display: flex; align-items: center; gap: 8px;">
-                    <span class="material-icons">nutrition</span>
-                    Try asking about chicken rice, laksa, or nasi lemak!
-                </div>
-            </div>
-        </div>
-        <div class="input-container">
-            <input type="text" id="user-input" placeholder="ask about food nutrients">
-            <button onclick="sendMessage()">Send</button>
+            <div class="input-container">
+            <input type="text" id="user-input" placeholder="Ask about food nutrients..." autocomplete="off">
+            <button onclick="sendMessage()">
+                <span class="material-icons">send</span>
+                Send
+            </button>
         </div>
     </div>
 
-    <script src="script.js"></script> 
-
+    <script src="script.js"></script>
 </body>
 
 </html>
