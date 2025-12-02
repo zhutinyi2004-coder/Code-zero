@@ -73,7 +73,7 @@ function addMaterialMessage(text, sender) {
     chatBox.scrollTop = chatBox.scrollHeight;
 }
 
-// --- NEW FUNCTION: Add Typing Indicator ---
+
 function addTypingIndicator() {
     const chatBox = document.getElementById('chat-box');
     const indicatorDiv = document.createElement('div');
@@ -91,25 +91,24 @@ function addTypingIndicator() {
     return indicatorDiv; 
 }
 
-// --- NEW FUNCTION: Remove Typing Indicator ---
+
 function removeTypingIndicator(indicator) {
     if (indicator && indicator.parentNode) {
         indicator.parentNode.removeChild(indicator);
     }
 }
 
-// enter to send messages
+
 document.getElementById('user-input').addEventListener('keypress', function(e) {
     if (e.key === 'Enter') {
         sendMessage();
     }
 });
 
-// focus on user input when page reloads
 window.addEventListener('load', function() {
     document.getElementById('user-input').focus();
 });
-// --- NEW FUNCTION: Add Typing Indicator ---
+
 function addTypingIndicator() {
     const chatBox = document.getElementById('chat-box');
     const indicatorDiv = document.createElement('div');
