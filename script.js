@@ -1,16 +1,17 @@
-//connect to backend flask
+// connect to backend flask
 async function sendMessage() {
     const userInput = document.getElementById('user-input');
     const message = userInput.value.trim();
 
     if (!message) return;
-
-    // add user message
     addMessage(message, 'user');
     userInput.value = '';
+    userInput.disabled = true; 
+    const typingIndicator = addTypingIndicator();
 
     try {
-        // flask backend
+
+        await new Promise(resolve => setTimeout(resolve, 1500)); 
         const response = await fetch('http://127.0.0.1:5000/chat', {
             method: 'POST',
             headers: {
@@ -23,17 +24,26 @@ async function sendMessage() {
         });
 
         const data = await response.json();
+        
 
-        //chatbot response
+        removeTypingIndicator(typingIndicator);
+
+
         addMaterialMessage(data.response, 'bot');
 
     } catch (error) {
         console.error('Error:', error);
+        // Ensure indicator is removed even on error
+        removeTypingIndicator(typingIndicator); 
         addMaterialMessage('Sorry, I encountered an error. Please try again.', 'bot');
+    } finally {
+        // Re-enable input
+        userInput.disabled = false;
+        userInput.focus();
     }
 }
 
-// messages - simple style
+
 function addMessage(text, sender) {
     const chatBox = document.getElementById('chat-box');
     const messageDiv = document.createElement('div');
@@ -63,6 +73,31 @@ function addMaterialMessage(text, sender) {
     chatBox.scrollTop = chatBox.scrollHeight;
 }
 
+// --- NEW FUNCTION: Add Typing Indicator ---
+function addTypingIndicator() {
+    const chatBox = document.getElementById('chat-box');
+    const indicatorDiv = document.createElement('div');
+    indicatorDiv.className = 'typing-indicator';
+    indicatorDiv.innerHTML = `
+        <span class="material-icons" style="color: #38a169;">smart_toy</span>
+        <div class="typing-dots">
+            <span class="typing-dot"></span>
+            <span class="typing-dot"></span>
+            <span class="typing-dot"></span>
+        </div>
+    `;
+    chatBox.appendChild(indicatorDiv);
+    chatBox.scrollTop = chatBox.scrollHeight;
+    return indicatorDiv; 
+}
+
+// --- NEW FUNCTION: Remove Typing Indicator ---
+function removeTypingIndicator(indicator) {
+    if (indicator && indicator.parentNode) {
+        indicator.parentNode.removeChild(indicator);
+    }
+}
+
 // enter to send messages
 document.getElementById('user-input').addEventListener('keypress', function(e) {
     if (e.key === 'Enter') {
@@ -74,3 +109,21 @@ document.getElementById('user-input').addEventListener('keypress', function(e) {
 window.addEventListener('load', function() {
     document.getElementById('user-input').focus();
 });
+// --- NEW FUNCTION: Add Typing Indicator ---
+function addTypingIndicator() {
+    const chatBox = document.getElementById('chat-box');
+    const indicatorDiv = document.createElement('div');
+    indicatorDiv.className = 'typing-indicator';
+    indicatorDiv.innerHTML = `
+        <span class="material-icons" style="color: #38a169;">restaurant_menu</span>
+        <div class="typing-dots">
+            <span class="typing-dot"></span>
+            <span class="typing-dot"></span>
+            <span class="typing-dot"></span>
+        </div>
+        <span style="font-style: italic; color: #4a5568;">wait a sec...</span>
+    `;
+    chatBox.appendChild(indicatorDiv);
+    chatBox.scrollTop = chatBox.scrollHeight;
+    return indicatorDiv; 
+}
