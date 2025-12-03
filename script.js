@@ -9,9 +9,7 @@ async function sendMessage() {
     userInput.disabled = true; 
     const typingIndicator = addTypingIndicator();
 
-    try {
-
-        await new Promise(resolve => setTimeout(resolve, 1500)); 
+    try { 
         const response = await fetch('http://127.0.0.1:5000/chat', {
             method: 'POST',
             headers: {
@@ -108,21 +106,3 @@ document.getElementById('user-input').addEventListener('keypress', function(e) {
 window.addEventListener('load', function() {
     document.getElementById('user-input').focus();
 });
-
-function addTypingIndicator() {
-    const chatBox = document.getElementById('chat-box');
-    const indicatorDiv = document.createElement('div');
-    indicatorDiv.className = 'typing-indicator';
-    indicatorDiv.innerHTML = `
-        <span class="material-icons" style="color: #38a169;">restaurant_menu</span>
-        <div class="typing-dots">
-            <span class="typing-dot"></span>
-            <span class="typing-dot"></span>
-            <span class="typing-dot"></span>
-        </div>
-        <span style="font-style: italic; color: #4a5568;">wait a sec...</span>
-    `;
-    chatBox.appendChild(indicatorDiv);
-    chatBox.scrollTop = chatBox.scrollHeight;
-    return indicatorDiv; 
-}
