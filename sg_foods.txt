@@ -1,0 +1,33 @@
+# singapore food nutrition database
+# expanded version with 30 local foods
+
+{"name": "Chicken Rice", "calories": 607, "protein": 25, "carbs": 93, "fat": 14, "sodium": 1200, "fiber": 2, "sugar": 3}
+{"name": "Nasi Lemak", "calories": 644, "protein": 13, "carbs": 78, "fat": 30, "sodium": 1100, "fiber": 3, "sugar": 5}
+{"name": "Char Kway Teow", "calories": 742, "protein": 15, "carbs": 82, "fat": 38, "sodium": 1800, "fiber": 2, "sugar": 8}
+{"name": "Laksa", "calories": 569, "protein": 17, "carbs": 68, "fat": 25, "sodium": 2400, "fiber": 4, "sugar": 12}
+{"name": "Hokkien Mee", "calories": 680, "protein": 22, "carbs": 75, "fat": 32, "sodium": 1600, "fiber": 3, "sugar": 6}
+{"name": "Bak Chor Mee", "calories": 465, "protein": 18, "carbs": 64, "fat": 15, "sodium": 1400, "fiber": 3, "sugar": 4}
+{"name": "Nasi Goreng", "calories": 595, "protein": 16, "carbs": 72, "fat": 27, "sodium": 1300, "fiber": 2, "sugar": 7}
+{"name": "Roti Prata", "calories": 369, "protein": 8, "carbs": 45, "fat": 17, "sodium": 580, "fiber": 2, "sugar": 3}
+{"name": "Yong Tau Foo", "calories": 320, "protein": 15, "carbs": 42, "fat": 10, "sodium": 900, "fiber": 5, "sugar": 4}
+{"name": "Chilli Crab", "calories": 425, "protein": 28, "carbs": 35, "fat": 18, "sodium": 1500, "fiber": 2, "sugar": 8}
+{"name": "Satay", "calories": 180, "protein": 14, "carbs": 8, "fat": 11, "sodium": 420, "fiber": 1, "sugar": 4}
+{"name": "Mee Goreng", "calories": 615, "protein": 14, "carbs": 78, "fat": 28, "sodium": 1700, "fiber": 3, "sugar": 9}
+{"name": "Fish Soup", "calories": 285, "protein": 22, "carbs": 38, "fat": 5, "sodium": 950, "fiber": 2, "sugar": 2}
+{"name": "Carrot Cake", "calories": 420, "protein": 8, "carbs": 54, "fat": 19, "sodium": 1200, "fiber": 2, "sugar": 5}
+{"name": "Economic Rice", "calories": 550, "protein": 28, "carbs": 65, "fat": 18, "sodium": 1100, "fiber": 4, "sugar": 3}
+{"name": "Oyster Omelette", "calories": 385, "protein": 12, "carbs": 42, "fat": 18, "sodium": 1350, "fiber": 1, "sugar": 4}
+{"name": "Wonton Mee", "calories": 490, "protein": 16, "carbs": 70, "fat": 15, "sodium": 1250, "fiber": 3, "sugar": 5}
+{"name": "Popiah", "calories": 235, "protein": 8, "carbs": 32, "fat": 9, "sodium": 480, "fiber": 4, "sugar": 6}
+{"name": "Rojak", "calories": 315, "protein": 6, "carbs": 48, "fat": 12, "sodium": 650, "fiber": 5, "sugar": 22}
+{"name": "Kaya Toast", "calories": 245, "protein": 6, "carbs": 28, "fat": 12, "sodium": 320, "fiber": 1, "sugar": 11}
+{"name": "Bak Kut Teh", "calories": 380, "protein": 32, "carbs": 18, "fat": 20, "sodium": 1600, "fiber": 2, "sugar": 3}
+{"name": "Mee Siam", "calories": 520, "protein": 14, "carbs": 68, "fat": 22, "sodium": 1450, "fiber": 3, "sugar": 12}
+{"name": "Prawn Noodles", "calories": 485, "protein": 20, "carbs": 62, "fat": 18, "sodium": 1800, "fiber": 2, "sugar": 6}
+{"name": "Murtabak", "calories": 580, "protein": 22, "carbs": 55, "fat": 30, "sodium": 950, "fiber": 3, "sugar": 5}
+{"name": "Chicken Curry", "calories": 445, "protein": 28, "carbs": 12, "fat": 32, "sodium": 1200, "fiber": 2, "sugar": 4}
+{"name": "Tau Huay", "calories": 150, "protein": 8, "carbs": 18, "fat": 5, "sodium": 85, "fiber": 1, "sugar": 14}
+{"name": "Ice Kacang", "calories": 280, "protein": 4, "carbs": 62, "fat": 2, "sodium": 45, "fiber": 3, "sugar": 48}
+{"name": "Bee Hoon", "calories": 380, "protein": 12, "carbs": 58, "fat": 12, "sodium": 1050, "fiber": 2, "sugar": 4}
+{"name": "Fried Rice", "calories": 520, "protein": 14, "carbs": 68, "fat": 22, "sodium": 1150, "fiber": 2, "sugar": 3}
+{"name": "Lor Mee", "calories": 495, "protein": 18, "carbs": 64, "fat": 19, "sodium": 1650, "fiber": 3, "sugar": 7}
