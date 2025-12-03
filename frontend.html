@@ -1,45 +1,69 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Singapore Nutrition Chatbot</title>
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap">
     <link rel="stylesheet" href="style.css">
-
 </head>
-
 <body>
-
     <div class="chat-container">
         <h1>
-            <span class="material-icons" style="vertical-align: middle; margin-right: 8px;">restaurant</span>
+            <span class="material-icons">restaurant</span>
             Singapore Nutrition Bot
+            <div class="chat-header-actions">
+                <button class="header-action-btn" onclick="toggleTheme()" title="Toggle theme">
+                    <span class="material-icons">dark_mode</span>
+                </button>
+                <button class="header-action-btn" onclick="clearChat()" title="Clear chat">
+                    <span class="material-icons">delete</span>
+                </button>
+            </div>
         </h1>
 
         <div id="chat-box">
+            <!-- Chat status -->
+            <div class="chat-status">
+                <span class="status-indicator"></span>
+                <span>Online • Ready to help with your nutrition questions</span>
+            </div>
+
+            <!-- Welcome messages -->
             <div class="message bot-message">
-                Hello! I can help with nutrition info for Singaporean foods.
-            </div>     
+                Hello! I'm your Singapore Nutrition Assistant. 🇸🇬
+                <div class="message-timestamp">Just now</div>
+            </div>
             
             <div class="mui-message bot">
                 <div style="display: flex; align-items: center; gap: 8px;">
-                    <span class="material-icons">nutrition</span>
-                    Try asking about chicken rice, laksa, or nasi lemak!
+                    <span class="material-icons" style="color: #38a169;">nutrition</span>
+                    <span>Ask me about calories, nutrients, or healthy swaps for local dishes!</span>
                 </div>
             </div>
-        </div>
+
+        <!-- Scroll to bottom button -->
+        <button class="scroll-to-bottom" onclick="scrollToBottom()" title="Scroll to bottom">
+            <span class="material-icons">keyboard_arrow_down</span>
+        </button>
+
+        <!-- Input area -->
         <div class="input-container">
-            <input type="text" id="user-input" placeholder="Ask about food nutrients..." autocomplete="off">
-            <button onclick="sendMessage()">
+            <div style="position: relative; flex-grow: 1;">
+                <input type="text" id="user-input" placeholder="Ask about food nutrients..." autocomplete="off">
+                <button class="voice-input-btn" onclick="startVoiceInput()" title="Voice input">
+                    <span class="material-icons">mic</span>
+                </button>
+            </div>
+            <button onclick="sendMessage()" class="send-btn">
                 <span class="material-icons">send</span>
                 Send
             </button>
         </div>
-    </div>
 
     <script src="script.js"></script>
 </body>
+</html>
 
 </html>
