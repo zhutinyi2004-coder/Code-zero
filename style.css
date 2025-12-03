@@ -474,3 +474,11 @@ button:disabled {
     animation: pulse 1s;
 };
 }
+/* Imrpovements I know may have duplicates will edit later.*/
+/* gradient header*/
+.chat-container h1{
+    background: linear-gradient(135deg,#38a169 0%,#2d6a4f 100%);
+    padding: 20px;
+    position:relative
+
+
