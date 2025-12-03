@@ -1,4 +1,4 @@
-/*main body styling */
+/* main body styling */
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
@@ -13,7 +13,7 @@ body {
 .chat-container {
     width: 100%;
     max-width: 400px;
-    background: rgba(255,255,255,0.95);
+    background: rgba(255, 255, 255, 0.95);
     border-radius: 20px;
     box-shadow: 
         0 10px 30px rgba(0, 0, 0, 0.2),
@@ -23,8 +23,9 @@ body {
     display: flex;
     flex-direction: column;
     backdrop-filter: blur(10px);
-    border: 1px solid rgba(255,255,255,0.3);
+    border: 1px solid rgba(255, 255, 255, 0.3);
 }
+
 /* Header with gradient */
 h1 {
     text-align: center;
@@ -35,7 +36,7 @@ h1 {
     font-size: 1.4em;
     font-weight: 600;
     letter-spacing: 0.5px;
-    text-shadow: 0 1px 2px rgba(0,0,0,0.2);
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -50,32 +51,36 @@ h1 {
     border-top: 1px solid rgba(56, 161, 105, 0.1);
     display: flex;
     flex-direction: column;
-    gap: 15px
+    gap: 15px;
 }
 
-/* custom scrollbar*/
+/* custom scrollbar */
 #chat-box::-webkit-scrollbar {
-    width: 6px; /* Default width is small/narrow */
-    transition: width 0.3s ease; 
+    width: 6px;
+    transition: width 0.3s ease;
 }
 
 #chat-box:hover::-webkit-scrollbar {
     width: 8px;
 }
+
 #chat-box::-webkit-scrollbar-track {
     background: rgba(0, 0, 0, 0.05);
     border-radius: 10px;
     margin: 5px 0;
 }
+
 #chat-box::-webkit-scrollbar-thumb {
     background: linear-gradient(to bottom, #38a169, #2d6a4f);
     border-radius: 10px;
     transition: all 0.3s ease;
 }
+
 #chat-box::-webkit-scrollbar-thumb:hover {
     background: linear-gradient(to bottom, #2d6a4f, #1b4332);
     box-shadow: 0 0 5px rgba(56, 161, 105, 0.5);
 }
+
 .message {
     padding: 12px 18px;
     margin-bottom: 5px;
@@ -88,7 +93,7 @@ h1 {
 }
 
 .user-message {
-     background: linear-gradient(135deg, #38a169 0%, #2d6a4f 100%);
+    background: linear-gradient(135deg, #38a169 0%, #2d6a4f 100%);
     color: white;
     margin-left: auto;
     border-bottom-right-radius: 5px;
@@ -115,10 +120,9 @@ h1 {
     margin-right: auto;
     border-bottom-left-radius: 5px;
     box-shadow:
-        0 2px 8px rgba(0,0,0,0.08),
-        inset 0 1px 0 rgba(255,255,255,0.8);
+        0 2px 8px rgba(0, 0, 0, 0.08),
+        inset 0 1px 0 rgba(255, 255, 255, 0.8);
     position: relative;
-    
 }
 
 .bot-message::after {
@@ -154,7 +158,7 @@ h1 {
 }
 
 #user-input:focus {
-   border-color: #38a169;
+    border-color: #38a169;
     box-shadow: 
         0 0 0 3px rgba(56, 161, 105, 0.1),
         0 4px 10px rgba(56, 161, 105, 0.2);
@@ -164,7 +168,8 @@ h1 {
 #user-input::placeholder {
     color: #a0aec0;
 }
-/* button with styling*/
+
+/* button styling */
 button {
     padding: 12px 24px;
     background: linear-gradient(135deg, #2d3748 0%, #1a202c 100%);
@@ -190,11 +195,11 @@ button:hover {
     background: linear-gradient(135deg, #38a169 0%, #2d6a4f 100%);
     transform: translateY(-2px);
     box-shadow:
-        0 6px 12px rgba(56,161,105,0.3),
-        inset 0 1px 0 rgba(255,255,255,0.2);
+        0 6px 12px rgba(56, 161, 105, 0.3),
+        inset 0 1px 0 rgba(255, 255, 255, 0.2);
 }
 
-   button:active {
+button:active {
     transform: translateY(0);
     box-shadow: 
         0 2px 4px rgba(0, 0, 0, 0.1),
@@ -206,11 +211,13 @@ button:disabled {
     cursor: not-allowed;
     transform: none !important;
 }
+
 /* quick questions buttons */
 .quick-questions {
     margin: 20px 0;
     animation: fadeIn 0.5s ease;
 }
+
 .quick-questions-header {
     display: flex;
     align-items: center;
@@ -220,6 +227,7 @@ button:disabled {
     margin-bottom: 12px;
     font-weight: 500;
 }
+
 .quick-buttons {
     display: flex;
     flex-wrap: wrap;
@@ -249,8 +257,6 @@ button:disabled {
     border-color: #38a169;
 }
 
-
-
 /* Message animations */
 @keyframes messageAppear {
     from {
@@ -260,138 +266,26 @@ button:disabled {
     to {
         opacity: 1;
         transform: translateY(0);
+    }
 }
 
-/* Material UI style enhanced */
-    
-.mui-message {
+/* Typing indicator */
+.typing-indicator {
+    display: flex;
+    align-items: center;
+    gap: 12px;
     background: white;
+    padding: 16px 20px;
     border-radius: 16px;
-    padding: 14px 18px;
-    margin: 5px 0;
+    margin-right: auto;
+    margin-bottom: 10px;
+    max-width: 120px;
     box-shadow: 
         0 2px 10px rgba(0, 0, 0, 0.08),
         0 1px 2px rgba(0, 0, 0, 0.06);
-    transition: all 0.3s ease;
-    border-left: 4px solid transparent;
-    animation: messageAppear 0.4s ease;
-    backdrop-filter: blur(5px);
+    border-left: 4px solid #4caf50;
+    animation: messageAppear 0.3s ease;
 }
-/* Material-UI style button */
-.mui-button {
-    background-color: #1976d2;
-    color: white;
-    border: none;
-    border-radius: 4px;
-    padding: 10px 16px;
-    font-family: Arial, sans-serif;
-    font-size: 14px;
-    font-weight: 500;
-    text-transform: uppercase;
-    letter-spacing: 0.5px;
-    cursor: pointer;
-    transition: background-color 0.3s, box-shadow 0.3s, transform 0.2s;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.2);
-    display: inline-flex;
-    align-items: center;
-    gap: 8px;
-}
-
-.mui-button:hover {
-    background-color: #1565c0;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.3);
-    transform: translateY(-1px);
-}
-
-.mui-button:active {
-    transform: translateY(0);
-    box-shadow: 0 2px 4px rgba(0,0,0,0.2);
-}
-
-/* Material-UI chatbox */
-.mui-input {
-    border: none;
-    border-bottom: 2px solid #1976d2;
-    padding: 12px 8px;
-    font-family: Arial, sans-serif;
-    font-size: 16px;
-    background: transparent;
-    transition: border-color 0.3s, box-shadow 0.3s;
-    width: 100%;
-}
-
-.mui-input:focus {
-    outline: none;
-    border-bottom-color: #ff4081;
-    box-shadow: 0 2px 0 0 #ff4081;
-}
-
-.mui-input::placeholder {
-    color: #666;
-    opacity: 0.7;
-}
-
-/* Material-UI style card */
-.mui-card {
-    background: white;
-    border-radius: 8px;
-    padding: 16px;
-    margin: 8px 0;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-    transition: box-shadow 0.3s, transform 0.3s;
-    border-left: 4px solid #1976d2;
-}
-
-.mui-card:hover {
-    box-shadow: 0 4px 16px rgba(0,0,0,0.2);
-    transform: translateY(-2px);
-}
-
-
-.mui-message.user {
-    background:  linear-gradient(135deg, #1976d2 0%, #1565c0 100%);
-    color: white;
-    margin-left: auto;
-    border-left-color: #0d47a1;
-    box-shadow:
-        0 4px 12px rgba(25,118,210,0.25),
-        inset 0 1px 0 rgba(255,255,255,0.2);
-}
-
-.mui-message.bot {
-    background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
-    margin-right: auto;
-    border-left-color: #4caf50;
-    box-shadow:
-        0 4px 12px rgba(0,0,0,0.05),
-        inset 0 1px 0 rgba(255,255,255,0.8);
-}
-
-.mui-message:hover {
-    transform: translateY(-2px);
-    box-shadow: 
-        0 6px 16px rgba(0, 0, 0, 0.12),
-        0 2px 4px rgba(0, 0, 0, 0.08);
-}
-
-/*typ[ing indicator */
-    .typing-indicator {
-        display: flex;
-        align-items: center;
-        gap: 12px;
-        background: white;
-        padding: 16px 20px;
-        border-radius: 16px;
-        margin-right: auto;
-        margin-bottom: 10px;
-        max-width: 120px;
-        box-shadow: 
-            0 2px 10px rgba(0, 0, 0, 0.08),
-            0 1px 2px rgba(0, 0, 0, 0.06);
-        border-left: 4px solid #4caf50;
-        animation: messageAppear 0.3s ease;
-
-        }
 
 .typing-dots {
     display: flex;
@@ -424,9 +318,8 @@ button:disabled {
         opacity: 1;
     }
 }
-        
 
-/*nuitrition card */
+/* nutrition card */
 .nutrition-card {
     background: linear-gradient(135deg, #ffffff 0%, #f8fff8 100%);
     border-left: 5px solid #38a169;
@@ -441,7 +334,6 @@ button:disabled {
     overflow: hidden;
 }
 
-
 .nutrition-card::before {
     content: '';
     position: absolute;
@@ -452,6 +344,7 @@ button:disabled {
     background: linear-gradient(135deg, rgba(56, 161, 105, 0.1) 0%, transparent 50%);
     border-radius: 0 0 0 100%;
 }
+
 @keyframes cardAppear {
     from {
         opacity: 0;
@@ -480,7 +373,7 @@ button:disabled {
     align-items: center;
 }
 
-    /* Stats grid in nutrition card */
+/* Stats grid in nutrition card */
 .stats-grid {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -579,5 +472,5 @@ button:disabled {
 
 .new-message {
     animation: pulse 1s;
+};
 }
-    
